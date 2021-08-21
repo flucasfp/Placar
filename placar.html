@@ -1,0 +1,133 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="placar.css">
+    <title>Placar</title>
+    <link rel="icon" href="create/logo.png" type="image/x-icon">
+    <meta charset="utf-8" />
+	<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <img id="imagem" src="vs.png"></img>
+    <div class="center absolute">
+        <div id="placar1" class="placar centerAb">
+            <p id="placarAtual1" class="margem aniIn">0</p>
+            <p id="placarFuturo1" class="absolute margem aniOut">0</p>
+        </div>
+        <div id="placar2" class="placar centerAb">
+            <p id="placarAtual2" class="margem aniIn">0</p>
+            <p id="placarFuturo2" class="absolute margem aniOut">0</p>
+        </div>
+        <div id="fase" class="margem centerAb">
+            <p id="faseAtual" class="margem aniIn">Primeira Fase</p>
+            <p id="faseFuturo" class="absolute margem aniOut">Primeira Fase</p>
+        </div>
+        <div id="round" class="margem centerAb">
+            <p id="roundAtual" class="margem aniIn">1ºRound</p>
+            <p id="roundFuturo" class="absolute margem aniOut">1ºRound</p>
+        </div>
+        <div id="nome1cont" class="nomeCont margem centerAb">
+            <p id="nome1Atual" class="margem aniIn">Player 1</p>
+            <p id="nome1Futuro" class="absolute margem aniOut">Player 1</p>
+        </div>
+        <div id="nome2cont" class="nomeCont margem centerAb">
+            <p id="nome2Atual" class="margem aniIn">Player 2</p>
+            <p id="nome2Futuro" class="absolute margem aniOut">Player 2</p>
+        </div>
+        <div id="vencedor" class="margem centerAb aniVencedor">
+            <div id="tipoVencedor" class="aniTipo">
+                <p id="tipoVencedorText" class="margem">Ferramenta
+                    Criada por:
+                </p>   
+            </div>
+            <div id="nomeVencedor" class="aniNome">
+                <p id="nomeVencedorText" class="margem"> DX </p>
+                
+            </div>
+
+            
+        </div>
+
+
+
+
+
+        <div id="playerTwitch1" class="centerAb absolute margem playerTwitchCrop">
+            <div id="twitch1" class="playerTwitch"  ></div>
+        </div>
+        <div id="playerTwitch2" class="centerAb absolute margem playerTwitchCrop">
+            <div id="twitch2" class="playerTwitch"  ></div>
+        </div>
+        
+    </div>
+    <div class="center">
+        <div id="menuPlayer1" class="menu centerAb">
+            <button id="audioPlayer1">Selecionar
+            Audio</button>
+            <p class="descricao gap1">Nome</p>
+            <input id="inpNomePlayer1" class="descricao" placeholder="Player 1">
+            <p class="descricao  gap2">Twitch</p>
+            <input id="inpTwitchPlayer1"class="descricao">
+        </div>
+        <div id="menuPlayer2" class="menu centerAb">
+            <button id="audioPlayer2">Selecionar
+            Audio</button>
+            <p class="descricao gap1">Nome</p>
+            <input id="inpNomePlayer2" class="descricao" placeholder="Player 2">
+            <p class="descricao gap2">Twitch</p>
+            <input id="inpTwitchPlayer2"class="descricao">
+        </div>
+        <div class="menu centerAb">
+            <div class="menuVitoria">
+                <button id="vitoriaPlayer1">Vitoria
+                    Player 1</button>
+                <button id="rematch">Rematch</button>
+                <button id="vitoriaPlayer2">Vitoria
+                    Player 1</button>
+            </div>
+            <button id="aplicar" class="gap1">Aplicar Mudanças
+                nos Players
+            </button>
+            <p class="descricao gap2">Fase Atual</p>
+            <input id="inpFaseAtual"class="descricao" value="Primeira Fase">
+        </div>
+        <div class="centerAb menuBarra"></div>
+        
+
+    </div>
+    
+
+    <script language="javascript" src="create/lz-string.js"></script>
+    <script src="placar.js"></script>
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+    <script type="text/javascript">
+       /* var embed1 = new Twitch.Embed("twitch1", {
+        width: 1920,
+        height: 1080,
+        channel: "ebisei",
+        layout: "video",
+        autoplay: true,
+        muted:true,
+        // Only needed if this page is going to be embedded on other websites
+        parent: ["embed.example.com", "othersite.example.com"]
+      });
+      var embed2 = new Twitch.Embed("twitch2", {
+        width: 1920,
+        height: 1080,
+        channel: "justcallmejack",
+        layout: "video",
+        autoplay: true,
+        muted:true,
+        // Only needed if this page is going to be embedded on other websites
+        parent: ["embed.example.com", "othersite.example.com"]
+      });
+      var player = embed2.getPlayer();
+      player.setMuted(true)
+      */
+    </script>
+    
+    
+</body>
+
+</html>

@@ -1,0 +1,280 @@
+body{
+    margin: 0px;
+    font-family: Lato;
+    font-weight: 600;
+    background-color: rgb(69, 70, 87);
+    color: #fff;
+    width: 1920px;
+    height: 1530px;
+}
+
+button{
+    white-space: pre-line;
+    font-size: 30px;
+    background-color: #17c97b;
+    font-family: Lato;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    border-color: transparent;
+    padding: 5px 30px 5px 30px;
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 3px;
+    transition: background-color ease-in-out .1s, transform ease-in-out .1s;
+    max-width: 400px;
+    user-select: none;
+    cursor: pointer;
+    margin: 25px;
+}
+button:hover{
+    background-color:#099280;
+    transform: scale(.95);
+    padding: 5px 30px 5px 30px;
+}
+#menuPlayer1{
+    left: -642px;
+}
+#menuPlayer2{
+    left: 642px;
+}
+.menu {
+    display: grid;
+    justify-items: center;
+}
+.menuVitoria{
+    display: flex;
+    align-items: center;
+}
+.menuBarra{
+    width: 1700px;
+    height: 10px;
+    background-color: #17c97b;
+    border-radius: 15px;
+    top: 170px;
+}
+.descricao{
+    font-size: 30px;
+    font-family: Lato;
+    font-weight: 700;
+    color: #fff;
+    margin: 0px;
+}
+#nomeVencedorText{
+    white-space: nowrap
+}
+input{
+    background-color: #17c97b;
+    border-color: transparent;
+    border-style: solid;
+    border-radius: 15px;
+    border-width: 4px;
+    outline: none;
+    margin: 0px;
+    margin-bottom: 20px;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: .5; /* Firefox */
+  }
+.gap1{
+    margin-top: 100px;
+    margin-bottom: 0px;
+}
+.gap2{
+    margin-top: 20px;
+}
+/* #imagem{
+    background-color: rgb(104, 91, 124);
+    
+} */
+.center{
+    position: relative;
+    left: 960px;
+}
+.absolute{
+    position: absolute;
+    top:0px;
+}
+.centerAb{
+    position: absolute;
+    transform:translate(-50%,0px);
+}
+.placar{
+    transform: translate(0,0) ;
+    font-size: 80px;
+    top: 5px;
+    overflow: hidden;
+    width: 50;
+}
+.margem{
+    margin: 0px;
+    overflow: hidden;
+    display: grid;
+    text-align: center;
+    justify-items: center;
+}
+#vencedor{
+    white-space: pre-line;
+    top:560px;
+    text-align: center;
+    transform: translate(-50%,-50%);
+
+}
+#tipoVencedor{
+    display: inline-flex;
+    background-color: #131419;
+    font-size: 40px;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    clip-path: polygon(60px 0, 100% 0, calc(100% - 60px) 100%, 0% 100%);
+}
+#nomeVencedor{
+    display: inline-flex;
+    background-color: #333439;
+    font-size: 200px;
+    padding-left: 200px;
+    padding-right: 200px;
+    position: relative;
+    top:-10px;
+    z-index: -1;
+    clip-path: polygon(150px 0, 100% 0, calc(100% - 150px) 100%, 0% 100%);
+   
+}
+.playerTwitch{
+    position: relative;
+    left: -480px;
+}
+.playerTwitchCrop{
+    width: 960px;
+    z-index: -1;
+}
+#playerTwitch1{
+    left: -480px;
+}
+#playerTwitch2{
+    left: 480px;
+}
+#fase{
+    white-space: nowrap;
+    text-align: center;
+    font-size: 55px;
+    top: 21px;
+    width: 400px;
+}
+#round{
+    white-space: nowrap;
+    text-align: center;
+    font-size: 33px;
+    top: 126px;
+    width: 250px;
+}
+#placar1{
+    right: 235px;
+}
+#placar2{
+    left: 235px;
+}
+
+.nomeCont{
+    font-size: 67px;
+    text-align: center;
+    width: 636px;
+}
+#nome1cont{
+    left: -642px;
+}
+#nome2cont{
+    left: 642px;
+}
+
+
+
+
+.aniIN{
+    animation: In .2s ease-in-out forwards ;
+}
+.aniOut{
+    animation: Out .2s ease-in-out forwards ;/* infinite forwards */
+}
+
+
+
+
+@keyframes In {
+    0% {
+        transform: translateY(-100px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+@keyframes Out {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(100px);
+    }
+}
+
+.aniVencedor{
+    animation: vencedor 2s ease-out forwards ;/* infinite forwards */
+}
+.aniTipo{
+    animation: tipo 2s ease-out forwards ;/* infinite forwards */
+}
+.aniNome{
+    animation: nome 2s ease-out forwards ;/* infinite forwards */
+}
+
+
+
+@keyframes vencedor {
+    0% {
+        transform: translate(-50%,0%) scale(.8) rotate(15deg);
+    }
+    15% {
+        transform: translate(-50%,-50%) scale(1) rotate(-5deg);
+    }
+    95% {
+        transform: translate(-50%,-50%) scale(1.1) rotate(-8deg);
+    }
+
+    100% {
+        transform: translate(-50%,-50%) scale(.8) rotate(30deg);
+    }
+}
+@keyframes tipo {
+    0% {
+        transform: scaleY(0) translateX(-100px);
+    }
+    15% {
+        transform: scaleY(1) translateX(0);
+    }
+    95% {
+        transform: scaleY(1) translateX(3px);
+    }
+    100% {
+        transform: scaleY(0) translateX(100px);
+    }
+} 
+@keyframes nome {
+    0% {
+        transform:translateY(-80px) scaleY(0) translateX(-100px) translateY(80px);
+    }
+    15% {
+        transform:translateY(-80px) scaleY(1) translateX(0) translateY(0px) translateY(80px);
+    }
+    95% {
+        transform: scaleY(1) translateX(3px);
+    }
+    100% {
+        transform: scaleY(0) translateX(100px);
+    }
+} 
+
