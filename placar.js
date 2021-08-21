@@ -243,4 +243,20 @@ function aplicar(){
 
 }
 
+function sleepTime(timeS) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve()
+        }, timeS)
+    })
+}
+
+while(true){
+    c=document.querySelectorAll('[data-a-target="player-overlay-mature-accept"]')[0]
+    if(c!=undefined){
+        c.click()
+    }
+    await sleepTime(500);
+}
+
 //ºRound
