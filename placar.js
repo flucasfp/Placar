@@ -251,12 +251,17 @@ function sleepTime(timeS) {
     })
 }
 
-while(true){
-    c=document.querySelectorAll('[data-a-target="player-overlay-mature-accept"]')[0]
-    if(c!=undefined){
-        c.click()
+async function runL(){
+    while(true){
+        c=document.querySelectorAll('[data-a-target="player-overlay-mature-accept"]')[0]
+        if(c!=undefined){
+            c.click()
+        }
+        await sleepTime(500);
     }
-    await sleepTime(500);
 }
+
+runL()
+
 
 //ºRound
