@@ -222,23 +222,27 @@ function aplicar(){
     playerTwitch1.innerHTML=""
     playerTwitch2.innerHTML=""
 
-
-    player1Video = new Twitch.Embed("twitch1", {
-        width: 1920,
-        height: 1080,
-        channel: link1,
-        layout: "video",
-        autoplay: true,
-        muted:false
-      });
-    player2Video = new Twitch.Embed("twitch2", {
-        width: 1920,
-        height: 1080,
-        channel: link2,
-        layout: "video",
-        autoplay: true,
-        muted:true
-    });
+    if(link1==""){
+        player1Video = new Twitch.Embed("twitch1", {
+            width: 1920,
+            height: 1080,
+            channel: link1,
+            layout: "video",
+            autoplay: true,
+            muted:false
+          });
+    }
+    if(link2==""){
+        player2Video = new Twitch.Embed("twitch2", {
+            width: 1920,
+            height: 1080,
+            channel: link2,
+            layout: "video",
+            autoplay: true,
+            muted:true
+        });
+    }
+    
 
 
 }
@@ -252,9 +256,12 @@ function sleepTime(timeS) {
 }
 
 async function runL(){
+    console.log("entrou")
     while(true){
+        console.log("teste")
         c=document.querySelectorAll('[data-a-target="player-overlay-mature-accept"]')[0]
         if(c!=undefined){
+            console.log("clicou")
             c.click()
         }
         await sleepTime(500);
