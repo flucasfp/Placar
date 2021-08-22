@@ -222,7 +222,7 @@ function aplicar(){
     playerTwitch1.innerHTML=""
     playerTwitch2.innerHTML=""
 
-    if(link1==""){
+    if(link1!=""){
         player1Video = new Twitch.Embed("twitch1", {
             width: 1920,
             height: 1080,
@@ -230,9 +230,10 @@ function aplicar(){
             layout: "video",
             autoplay: true,
             muted:false
-          });
+        });  
     }
-    if(link2==""){
+    
+    if(link2!=""){
         player2Video = new Twitch.Embed("twitch2", {
             width: 1920,
             height: 1080,
@@ -242,7 +243,6 @@ function aplicar(){
             muted:true
         });
     }
-    
 
 
 }
