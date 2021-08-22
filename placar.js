@@ -92,7 +92,7 @@ function setVitoria(player){
         ultimoPonto=0
         changeRound(false)
     }else{
-        tipoVencedorText.innerHTML="Vencedor\n"+round+"ºRound"
+        tipoVencedorText.innerHTML="Vencedor\n"+round+" ºRound"
         if(player==1){
             nomeVencedorText.innerHTML=player1Nome
             player1Pontos++
@@ -146,7 +146,7 @@ function changeRound(change){
     roundFuturo.innerHTML=roundAtual.innerHTML
     if(change){
         round++
-        roundAtual.innerHTML=round+"ºRound"        
+        roundAtual.innerHTML=round+" ºRound"        
     }else{
         round--
         roundAtual.innerHTML="Rematch"
