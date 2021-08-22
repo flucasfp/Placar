@@ -258,12 +258,26 @@ function sleepTime(timeS) {
 async function runL(){
     console.log("entrou")
     while(true){
-        console.log("teste")
-        c=document.querySelectorAll('[data-a-target="player-overlay-mature-accept"]')[0]
-        if(c!=undefined){
-            console.log("clicou")
-            c.click()
+        iff=document.getElementsByTagName("iframe")
+        if(iff[0]!=undefined){
+            console.log(iff)
+            c=iff[0].querySelectorAll('[data-a-target="player-overlay-mature-accept"]')[0]
+            if(c!=undefined){
+                console.log("clicou")
+                c.click()
+            }
+    
         }
+        if(iff[1]!=undefined){
+            console.log(iff)
+            c=iff[1].querySelectorAll('[data-a-target="player-overlay-mature-accept"]')[0]
+            if(c!=undefined){
+                console.log("clicou")
+                c.click()
+            }
+    
+        }
+
         await sleepTime(500);
     }
 }
