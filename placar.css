@@ -103,7 +103,7 @@ input{
 .placar{
     transform: translate(0,0) ;
     font-size: 80px;
-    top: 5px;
+    top: 9px;
     overflow: hidden;
     width: 50;
 }
@@ -150,6 +150,7 @@ input{
 .playerTwitchCrop{
     width: 960px;
     z-index: -1;
+    top: 118px;
 }
 #playerTwitch1{
     left: -480px;
@@ -160,35 +161,35 @@ input{
 #fase{
     white-space: nowrap;
     text-align: center;
-    font-size: 55px;
-    top: 21px;
+    font-size: 52px;
+    top: 25px;
     width: 400px;
 }
 #round{
     white-space: nowrap;
     text-align: center;
     font-size: 33px;
-    top: 126px;
+    top: 129px;
     width: 250px;
 }
 #placar1{
-    right: 235px;
+    right: 232px;
 }
 #placar2{
-    left: 235px;
+    left: 232px;
 }
 
 .nomeCont{
     font-size: 67px;
     text-align: center;
     width: 636px;
-    top: 23px;
+    top: 17px;
 }
 #nome1cont{
-    left: -642px;
+    left: -615px;
 }
 #nome2cont{
-    left: 642px;
+    left: 615px;
 }
 
 

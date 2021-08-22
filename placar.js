@@ -224,8 +224,8 @@ function aplicar(){
 
     if(link1!=""){
         player1Video = new Twitch.Embed("twitch1", {
-            width: 1920,
-            height: 1080,
+            width: 1708,
+            height: 962,
             channel: link1,
             layout: "video",
             autoplay: true,
@@ -235,8 +235,8 @@ function aplicar(){
     
     if(link2!=""){
         player2Video = new Twitch.Embed("twitch2", {
-            width: 1920,
-            height: 1080,
+            width: 1708,
+            height: 962,
             channel: link2,
             layout: "video",
             autoplay: true,
