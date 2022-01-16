@@ -47,13 +47,7 @@
                 <p id="nomeVencedorText" class="margem"> DX </p>
                 
             </div>
-
-            
         </div>
-
-
-
-
 
         <div id="playerTwitch1" class="centerAb absolute margem playerTwitchCrop">
             <div id="twitch1" class="playerTwitch"  ></div>
@@ -69,7 +63,7 @@
             Audio</button>
             <p class="descricao gap1">Player 1</p>
             <div class="select-container">
-                <select class="descricao select-player selectpicker" id="select-player1" name="player1" data-live-search="true">
+                <select class="descricao select-player selectpicker" id="select-player1" name="player1" data-size="10" data-live-search="true">
                     <option value=-1>[Nenhum]</option>
                 </select>
             </div>
@@ -83,7 +77,7 @@
             Audio</button>
             <p class="descricao gap1">Player 2</p>
             <div class="select-container">
-                <select class="descricao select-player selectpicker" id="select-player2" name="player2" data-live-search="true">
+                <select class="descricao select-player selectpicker" id="select-player2" name="player2" data-size="10" data-live-search="true">
                     <option value=-1>[Nenhum]</option>
                 </select>
             </div>
@@ -98,11 +92,23 @@
                     Player 1</button>
                 <button id="rematch">Rematch</button>
                 <button id="vitoriaPlayer2">Vitoria
-                    Player 1</button>
+                    Player 2</button>
             </div>
             <button id="aplicar" class="gap1">Aplicar Mudanças
                 nos Players
             </button>
+            <p class="descricao gap2">Selecionar Fase</p>
+            <div class="descricao select-container">
+                <select class="descricao select-player selectpicker" id="select-fase" name="select-fase" data-size="10" data-live-search="true">
+                    <option value=-1>[Nenhum]</option>
+                </select>
+            </div>
+            <p class="descricao gap2">Selecionar Mapa</p>
+            <div class="descricao select-container">
+                <select class="descricao select-player selectpicker" id="select-mapa" name="select-mapa" data-size="10" data-live-search="true">
+                    <option value=-1>[Nenhum]</option>
+                </select>
+            </div>
             <p class="descricao gap2">Fase Atual</p>
             <input id="inpFaseAtual"class="descricao" value="Primeira Fase">
         </div>

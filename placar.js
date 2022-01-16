@@ -50,9 +50,6 @@ document.getElementById("vitoriaPlayer2").addEventListener('click', ()=>{setVito
 document.getElementById("aplicar").addEventListener('click',aplicar,false);
 
 
-
-
-
 player1Nome="Player 1"
 player2Nome="Player 2"
 
@@ -193,9 +190,7 @@ function aplicar(){
     nome2Futuro.classList.add("aniOut")
 
     faseAtual.classList.add("aniIn")
-    faseFuturo.classList.add("aniIn")
-
-    
+    faseFuturo.classList.add("aniIn")    
 
 
     player1Pontos=0
@@ -281,6 +276,8 @@ async function runL(){
 }
 
 var PLAYER_LIST = [];
+var FASE_LIST = [];
+
 function selectPlayer(value, playerPosition) {  // trigger to dropdown selection
     // playerPosition means if it is player 1 or player 2, value is the player Index
     if(value >= 0 && value < PLAYER_LIST.length) {
@@ -293,9 +290,38 @@ function selectPlayer(value, playerPosition) {  // trigger to dropdown selection
             $("#inpNomePlayer2").val(player.playerName);
             $("#inpTwitchPlayer2").val(player.playerTwitch);
             // do more
-        }
-        
-    } 
+        }        
+    } else {
+        $("#inpNomePlayer1").val("");
+        $("#inpTwitchPlayer1").val("");
+    }
+}
+
+function selectMap(map) {
+    console.log("Selected", map);
+}
+function setMapas(maps) {
+    $("#select-mapa option").each(function() {
+        $(this).remove();
+    })
+    $("#select-mapa").append(new Option("[Nenhum]", -1));
+    for(let i=0; i<maps.length; i++) {
+        let map = maps[i];
+        $("#select-mapa").append(new Option(map.songName.substring(0, 20)+" - "+map.levelAuthorName.substring(0,14), i));
+    }
+    $("#select-mapa").selectpicker("refresh");
+    $("#select-mapa").change(() => selectMap(maps[$("#select-mapa").val()]));
+}
+
+function selectFase(faseObjId) {  // trigger to dropdown selection fase
+    let fase = FASE_LIST[faseObjId];
+    if (!fase) {
+        $("#inpFaseAtual").val("");    
+        return;
+    }
+
+    $("#inpFaseAtual").val(fase.nome);
+    setMapas(fase.mapas);
 }
 
 function init() {
@@ -309,6 +335,13 @@ function init() {
         $("#select-player1").change((a) => selectPlayer(playerPosition=$("#select-player1").val(), 1));
         $("#select-player2").change((a) => selectPlayer(playerPosition=$("#select-player2").val(), 2));
     });
+    $.getJSON("fases.json", function(fasesList) {
+        FASE_LIST = fasesList;
+        for (let faseObjId in fasesList) {
+            $("#select-fase").append(new Option(fasesList[faseObjId].nome, faseObjId))
+        }
+        $("#select-fase").change(() => selectFase($("#select-fase").val()))
+    })
 }
 
 console.log("Starting...")
