@@ -32,6 +32,19 @@ button:hover{
     transform: scale(.95);
     padding: 5px 30px 5px 30px;
 }
+.select-container input {
+    background-color: white !important;
+    border: 2px solid;
+}
+.select-container button:hover {
+    transform: scale(1.0) !important;
+    padding: 6px 12px;    
+}
+.select-container .dropdown-menu, .select-container .filter-option-inner-inner{
+    font-size: 30px !important;
+    font-weight: 700 !important;
+}
+
 #menuPlayer1{
     left: -642px;
 }
@@ -54,11 +67,14 @@ button:hover{
     top: 170px;
 }
 .descricao{
-    font-size: 30px;
-    font-family: Lato;
-    font-weight: 700;
+    font-size: 30px !important;
+    font-family: Lato !important;
+    font-weight: 700 !important;
     color: #fff;
     margin: 0px;
+}
+.select-player {
+    color: rgb(53, 53, 53);
 }
 #nomeVencedorText{
     white-space: nowrap
@@ -72,6 +88,7 @@ input{
     outline: none;
     margin: 0px;
     margin-bottom: 20px;
+    width: 550px;
 }
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: white;

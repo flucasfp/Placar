@@ -61,7 +61,7 @@ player2Pontos=0
 ultimoPonto=0
 
 round=1
-
+  
 player1Video=undefined
 player2Video=undefined
 
@@ -260,7 +260,7 @@ async function runL(){
     while(true){
         iff=document.getElementsByTagName("iframe")
         if(iff[0]!=undefined){
-            console.log(iff)
+            // console.log(iff)
             c=iff[0].querySelectorAll('[data-a-target="player-overlay-mature-accept"]')[0]
             if(c!=undefined){
                 console.log("clicou")
@@ -269,20 +269,52 @@ async function runL(){
     
         }
         if(iff[1]!=undefined){
-            console.log(iff)
+            // console.log(iff)
             c=iff[1].querySelectorAll('[data-a-target="player-overlay-mature-accept"]')[0]
             if(c!=undefined){
                 console.log("clicou")
                 c.click()
-            }
-    
+            }    
         }
-
         await sleepTime(500);
     }
 }
 
-runL()
+var PLAYER_LIST = [];
+function selectPlayer(value, playerPosition) {  // trigger to dropdown selection
+    // playerPosition means if it is player 1 or player 2, value is the player Index
+    if(value >= 0 && value < PLAYER_LIST.length) {
+        player = PLAYER_LIST[value];
+        if (playerPosition == 1) {
+            $("#inpNomePlayer1").val(player.playerName);
+            $("#inpTwitchPlayer1").val(player.playerTwitch);            
+            // do more
+        } else {
+            $("#inpNomePlayer2").val(player.playerName);
+            $("#inpTwitchPlayer2").val(player.playerTwitch);
+            // do more
+        }
+        
+    } 
+}
+
+function init() {
+    $.getJSON("players.json", function(playerList) {
+        PLAYER_LIST = playerList
+        for (let i=0; i<playerList.length; i++) { 
+            player = playerList[i];
+            $("#select-player1").append(new Option(player.playerName, i));
+            $("#select-player2").append(new Option(player.playerName, i));
+        }
+        $("#select-player1").change((a) => selectPlayer(playerPosition=$("#select-player1").val(), 1));
+        $("#select-player2").change((a) => selectPlayer(playerPosition=$("#select-player2").val(), 2));
+    });
+}
+
+console.log("Starting...")
+init();
+
+runL();
 
 
 //ºRound
